@@ -28,8 +28,8 @@ class Game extends Component {
     ));
   }
 
-  reloadTime(callback) {
-    this.setState(({ currentTime: 30 }), callback);
+  reloadTime() {
+    this.setState(({ currentTime: 30 }));
   }
 
   clearTimeInterval() {

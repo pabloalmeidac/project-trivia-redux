@@ -60,14 +60,14 @@ class Questions extends Component {
   }
 
   nextQuestion() {
-    const { index, nextQuestion, reloadTime, timerGame } = this.props;
+    const { index, nextQuestion, reloadTime } = this.props;
     const numberTest = 4;
     if (index === numberTest) {
       const { history } = this.props;
       history.push('/feedback');
     } else {
       nextQuestion();
-      reloadTime(timerGame);
+      reloadTime();
       this.setState({ visible: false, disableQuestions: false, className: false });
     }
   }
