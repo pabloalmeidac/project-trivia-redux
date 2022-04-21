@@ -4,6 +4,7 @@ const INITIAL_STATE = {
   score: 0,
   picture: '',
   token: '',
+  players: [],
 };
 
 const player = (state = INITIAL_STATE, action) => {
@@ -21,6 +22,16 @@ const player = (state = INITIAL_STATE, action) => {
   case 'TOKEN_PLAYER':
     return {
       ...state, token: action.payload,
+    };
+  case 'GET_URL':
+    return {
+      ...state, picture: action.payload,
+    };
+  case 'RANKING_PLAYER':
+    return {
+      ...state,
+      players: [...state.players,
+        { ...action.payload }],
     };
   default:
     return state;

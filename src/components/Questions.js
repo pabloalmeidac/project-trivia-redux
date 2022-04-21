@@ -20,6 +20,7 @@ class Questions extends Component {
     this.nextQuestion = this.nextQuestion.bind(this);
     this.quest = this.quest.bind(this);
     this.enableButton = this.enableButton.bind(this);
+    this.getScore = this.getScore.bind(this);
   }
 
   componentDidMount() {
@@ -27,14 +28,7 @@ class Questions extends Component {
     getQuestions(token);
   }
 
-  count() {
-    this.setState((prevState) => ({
-      assertions: prevState.assertions + 1,
-    }));
-  }
-
-  enableButton(currTime, diff) {
-    this.setState({ visible: true, disableQuestions: true, className: true });
+  getScore(currTime, diff) {
     if (currTime && diff) {
       const { name, email, score, getScore } = this.props;
       const { assertions } = this.state;
@@ -59,14 +53,31 @@ class Questions extends Component {
     }
   }
 
+  count() {
+    this.setState((prevState) => ({
+      assertions: prevState.assertions + 1,
+    }));
+  }
+
+  enableButton(currTime, diff) {
+    const { stopTimer } = this.props;
+    stopTimer();
+    this.setState({ visible: true, disableQuestions: true, className: true });
+    this.getScore(currTime, diff);
+  }
+
   nextQuestion() {
-    const { index, nextQuestion, reloadTime } = this.props;
+    const { index, questionIndex, reloadTime } = this.props;
     const numberTest = 4;
     if (index === numberTest) {
-      const { history } = this.props;
+      const { history, name, picture, score } = this.props;
+      const ranking = [
+        { name, score, picture },
+      ];
+      localStorage.ranking = JSON.stringify(ranking);
       history.push('/feedback');
     } else {
-      nextQuestion();
+      questionIndex();
       reloadTime();
       this.setState({ visible: false, disableQuestions: false, className: false });
     }
@@ -92,7 +103,8 @@ class Questions extends Component {
           disableQuestions={ disableQuestions }
           className={ className }
         />
-        { visible ? <NextBtn nextQuestion={ this.nextQuestion } /> : null}
+        { visible || currentTime === 0
+          ? <NextBtn nextQuestion={ this.nextQuestion } /> : null}
       </div>
     );
   }
@@ -114,6 +126,7 @@ const mapStateToProps = ({ player, game }) => ({
   token: player.token,
   score: player.score,
   questions: game.questions,
+  picture: player.picture,
 });
 
 const mapDispatchToProps = (dispatch) => ({
