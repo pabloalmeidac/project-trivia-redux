@@ -19,7 +19,7 @@ O objetivo do projeto foi desenvolver um jogo de perguntas e respostas baseado n
   - Criar actions assíncronas na sua aplicação React que faz uso de Redux.
 
 
-# Imagem do projeto
+# Imagens do projeto
 
 ![login](https://github.com/pabloalmeidac/project-trivia-redux/blob/main-group-8-dev/src/login.jpg?raw=true)
 ![game](https://github.com/pabloalmeidac/project-trivia-redux/blob/main-group-8-dev/src/game.jpg?raw=true)
