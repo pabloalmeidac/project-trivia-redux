@@ -30,26 +30,31 @@ class Feedback extends React.Component {
     return (
       <div>
         <Header />
-        <p data-testid="feedback-text">{ congrat }</p>
-        <p>
-          Placar final:
-          {' '}
-          <span data-testid="feedback-total-score">{ score }</span>
-        </p>
-        <p>
-          Acertou:
-          {' '}
-          <span data-testid="feedback-total-question">{ assertions }</span>
-        </p>
+        <div className='header header_feedback'>
+          <p data-testid="feedback-text">{ congrat }</p>
+          <p>
+            Placar final:
+            {' '}
+            <span data-testid="feedback-total-score">{ score }</span>
+          </p>
+          <p>
+            Acertou:
+            {' '}
+            <span data-testid="feedback-total-question">{ assertions }</span>
+          </p>
+        </div>
+        
         <button
           type="button"
           data-testid="btn-play-again"
+          className="ranking_btn"
           onClick={ () => this.redirect('/') }
         >
           Jogar novamente
         </button>
         <button
           type="button"
+          className="ranking_btn"
           data-testid="btn-ranking"
           onClick={ () => this.redirect('/ranking') }
         >

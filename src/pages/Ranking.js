@@ -26,16 +26,18 @@ class Ranking extends Component {
     // if (stateLocalStorage.length === 0) return <p>Loading...</p>;
     const rankingPlayers = scoreSort.map(({ name, picture, score }, index) => (
       <div key={ index }>
-        <img
-          src={ picture }
-          alt={ name }
-        />
-        <p data-testid={ `player-name-${index}` }>
-          { name }
-        </p>
-        <p data-testid={ `player-score-${index}` }>
-          { score }
-        </p>
+        <div className="header header_feedback">
+          <img
+            src={ picture }
+            alt={ name }
+          />
+          <p data-testid={ `player-name-${index}` }>
+            { name }
+          </p>
+          <p data-testid={ `player-score-${index}` }>
+            { score }
+          </p>
+        </div>
       </div>
     ));
     return (
@@ -44,12 +46,14 @@ class Ranking extends Component {
         { rankingPlayers }
         <button
           type="button"
+          className='ranking_btn'
           onClick={ () => this.redirect('/feedback') }
         >
           Voltar
         </button>
         <button
           type="button"
+          className='ranking_btn'
           data-testid="btn-go-home"
           onClick={ () => this.redirect('/') }
         >
