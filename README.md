@@ -21,11 +21,11 @@ O objetivo do projeto foi desenvolver um jogo de perguntas e respostas baseado n
 
 # Imagem do projeto
 
-![login](https://raw.githubusercontent.com/pabloalmeidac/project-trivia-redux/pabloalmeidac/src/login.jpg)
-![game](https://raw.githubusercontent.com/pabloalmeidac/project-trivia-redux/pabloalmeidac/src/game.jpg)
-![answers](https://raw.githubusercontent.com/pabloalmeidac/project-trivia-redux/pabloalmeidac/src/answers.jpg)
-![feedback](https://raw.githubusercontent.com/pabloalmeidac/project-trivia-redux/pabloalmeidac/src/feedback.jpg)
-![ranking](https://raw.githubusercontent.com/pabloalmeidac/project-trivia-redux/pabloalmeidac/src/ranking.jpg)
+![login](https://github.com/pabloalmeidac/project-trivia-redux/blob/main-group-8-dev/src/login.jpg?raw=true)
+![game](https://github.com/pabloalmeidac/project-trivia-redux/blob/main-group-8-dev/src/game.jpg?raw=true)
+![answers](https://github.com/pabloalmeidac/project-trivia-redux/blob/main-group-8-dev/src/answers.jpg?raw=true)
+![feedback](https://github.com/pabloalmeidac/project-trivia-redux/blob/main-group-8-dev/src/feedback.jpg?raw=true)
+![ranking](https://github.com/pabloalmeidac/project-trivia-redux/blob/main-group-8-dev/src/ranking.jpg?raw=true)
 
 # Tecnologias utilizadas
 - React.js
