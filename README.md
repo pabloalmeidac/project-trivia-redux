@@ -21,6 +21,12 @@ O objetivo do projeto foi desenvolver um jogo de perguntas e respostas baseado n
 
 # Imagem do projeto
 
+![login](https://raw.githubusercontent.com/pabloalmeidac/project-trivia-redux/pabloalmeidac/src/login.jpg)
+![game](https://raw.githubusercontent.com/pabloalmeidac/project-trivia-redux/pabloalmeidac/src/game.jpg)
+![answers](https://raw.githubusercontent.com/pabloalmeidac/project-trivia-redux/pabloalmeidac/src/answers.jpg)
+![feedback](https://raw.githubusercontent.com/pabloalmeidac/project-trivia-redux/pabloalmeidac/src/feedback.jpg)
+![ranking](https://raw.githubusercontent.com/pabloalmeidac/project-trivia-redux/pabloalmeidac/src/ranking.jpg)
+
 # Tecnologias utilizadas
 - React.js
 - JavaScript
